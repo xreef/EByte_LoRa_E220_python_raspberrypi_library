@@ -374,7 +374,7 @@ class LoRaE220:
     def set_mode(self, mode: ModeType) -> ResponseStatusCode:
         self.managed_delay(40)
 
-        if self.m0 is None and self.m1 is None:
+        if self.m0_pin is None and self.m1_pin is None:
             logger.debug(
                 "The M0 and M1 pins are not set, which means that you are connecting the pins directly as you need!")
         else:

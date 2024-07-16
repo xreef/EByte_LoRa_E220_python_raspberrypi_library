@@ -16,6 +16,7 @@
 
 
 ### Changelog
+ - 2023-07-16 0.0.2 Fix retrieve transmisison power [Issue](https://github.com/xreef/EByte_LoRa_E220_python_raspberrypi_library/issues/1)
  - 2023-03-21 0.0.1 Fully functional library
 
 ### Installation
@@ -324,73 +325,8 @@ fixed
 
 
 
-<h2> esp8266 </h2>
-
-
-
-<p>esp8266 connection schema is more straightforward because it works at the same voltage of logical communications (3.3v).</p>
-
-
-
-<div class="wp-block-image">
-<img src="https://www.mischianti.org/wp-content/uploads/2019/10/LoRa_E32-TTL-100_WemosD1_VD_PU_FullyConnected_bb-e1570517387323.jpg"/>
-</div>
-
-
-
-<p>It’s essential to add a pull-up resistor (4,7Kohm) to get good stability.</p>
-
-
-
-<figure class="wp-block-table mischianti-table-left"><table><thead><tr><th>E22</th><th>esp8266</th></tr></thead><tbody><tr><td>M0</td><td>D7</td></tr><tr><td>M1</td><td>D6</td></tr><tr><td>TX</td><td>PIN D2 (PullUP 4,7KΩ)</td></tr><tr><td>RX</td><td>PIN D3 (PullUP 4,7KΩ)</td></tr><tr><td>AUX</td><td>PIN D5 (PullUP 4,7KΩ)</td></tr><tr><td>VCC</td><td>5V (but work with less power in 3.3v)</td></tr><tr><td>GND</td><td>GND</td></tr><tr><td></td><td></td></tr></tbody></table></figure>
-
-
-
-<h2>esp32</h2>
-
-
-
-<p>Similar connection schema for esp32, but for RX and TX, we use RX2 and TX2 because, by default, esp32 doesn’t have SoftwareSerial but has 3 Serial.</p>
-
-
-
-<div class="wp-block-image">
-<img src="https://www.mischianti.org/wp-content/uploads/2020/08/Ebyte-LoRa-E22-device-esp32-dev-kit-v1-breadboard-full-connection-768x668.jpg"/>
-</div>
-
-
-
-<figure class="wp-block-table mischianti-table-left"><table><thead><tr><th>E22</th><th>esp32</th></tr></thead><tbody><tr><td>M0</td><td>D21</td></tr><tr><td>M1</td><td>D19</td></tr><tr><td>TX</td><td>PIN RX2 (PullUP 4,7KΩ)</td></tr><tr><td>RX</td><td>PIN TX3 (PullUP 4,7KΩ)</td></tr><tr><td>AUX</td><td>PIN D18 (PullUP 4,7KΩ) (D15 to wake up)</td></tr><tr><td>VCC</td><td>5V (but work with less power in 3.3v)</td></tr><tr><td>GND</td><td>GND</td></tr><tr><td></td><td></td></tr></tbody></table></figure>
-
-
-
-<h2>Arduino MKR WiFi 1010 </h2>
-
-
-
-<div class="wp-block-image"><img src="https://www.mischianti.org/wp-content/uploads/2021/12/Ebyte_LoRa_Exx_Arduino_MKR_WiFi_1010_Fully_connected_breadboard-520x450.jpg"/></div>
-
-
-
-<figure class="wp-block-table mischianti-table-left"><table><tbody><tr><td>M0</td><td>2 (voltage divider)</td></tr><tr><td>M1</td><td>3 (voltage divider)</td></tr><tr><td>TX</td><td>PIN 14 Tx (PullUP 4,7KΩ)</td></tr><tr><td>RX</td><td>PIN 13 Rx (PullUP 4,7KΩ)</td></tr><tr><td>AUX</td><td>PIN 1 (PullUP 4,7KΩ)</td></tr><tr><td>VCC</td><td>5V</td></tr><tr><td>GND</td><td>GND</td></tr></tbody></table></figure>
-
-
-
-
-
-# An Arduino UNO shield to simplify the use
-![Arduino UNO shield](https://www.mischianti.org/wp-content/uploads/2019/12/ArduinoShieldMountedE32LoRa_min.jpg)
-
-You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_E32_Series_device_Arduino_shield.html) 
-
-Instruction and assembly video on 6 part of the guide
-
-# An WeMos D1 shield to simplify the use
-![Arduino UNO shield](https://www.mischianti.org/wp-content/uploads/2020/01/WeMosD1ShieldMountedE32LoRa_min.jpg)
-
-You can order the PCB  [here](https://www.pcbway.com/project/shareproject/LoRa_E32_Series_device_WeMos_D1_mini_shield_RF_8km_range.html) 
-
-Instruction and assembly video on 6 part of the guide
+#### Raspberry Pi
+![Raspberry Pi](https://www.mischianti.org/wp-content/uploads/2023/04/Raspberry-Pi-EByte-LoRa-Exx-fully-connected_bb.jpg)
 
 
 

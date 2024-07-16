@@ -301,9 +301,9 @@ class TransmissionPower:
             self.transmission_power = int(model[4:6])
 
     def get_transmission_power(self):
-        if self.transmission_power == self.transmission_power:
+        if self.transmission_power == 22:
             return TransmissionPower22
-        elif self.transmission_power == self.transmission_power:
+        elif self.transmission_power == 30:
             return TransmissionPower30
         else:
             return "Invalid transmission power param"

@@ -24,7 +24,7 @@ lora = LoRaE220('900T22D', loraSerial, aux_pin='PA7', m0_pin='PA8', m1_pin='PA9'
 
 # Initialize the LoRa module and print the initialization status code
 code = lora.begin()
-print("Initialization: {}", ResponseStatusCode.get_description(code))
+print(f"Initialization: {ResponseStatusCode.get_description(code)}")
 
 ##########################################################################################
 # GET CONFIGURATION
@@ -32,7 +32,7 @@ print("Initialization: {}", ResponseStatusCode.get_description(code))
 
 # Retrieve the current configuration of the LoRa module and print it to the console
 code, configuration = lora.get_configuration()
-print("Retrieve configuration: {}", ResponseStatusCode.get_description(code))
+print(f"Retrieve configuration: {ResponseStatusCode.get_description(code)}")
 print("------------- CONFIGURATION BEFORE CHANGE -------------")
 print_configuration(configuration)
 
@@ -51,7 +51,7 @@ configuration_to_set.SPED.airDataRate = AirDataRate.AIR_DATA_RATE_100_96
 configuration_to_set.SPED.uartParity = UARTParity.MODE_00_8N1
 configuration_to_set.SPED.uartBaudRate = UARTBaudRate.BPS_9600
 
-configuration_to_set.OPTION.transmissionPower = TransmissionPower('400T22D').\
+configuration_to_set.OPTION.transmissionPower = TransmissionPower('900T22D').\
                                                     get_transmission_power().POWER_10
 # or
 # configuration_to_set.OPTION.transmissionPower = TransmissionPower22.POWER_10
@@ -81,7 +81,7 @@ print_configuration(confSetted)
 
 # Set the configuration to default values and print the updated configuration to the console
 print("------------- RESTORE ALL DEFAULT -------------")
-configuration_to_set = Configuration('400T22D')
+configuration_to_set = Configuration('900T22D')
 code, confSetted = lora.set_configuration(configuration_to_set)
 print(ResponseStatusCode.get_description(code))
 print_configuration(confSetted)

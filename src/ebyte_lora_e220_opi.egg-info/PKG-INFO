@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: ebyte-lora-e220-opi
+Version: 0.0.2
+Summary: LoRa EBYTE E220 device library complete and tested with Arduino, esp8266, esp32, STM32 and Raspberry Pi Pico. LLCC68, Orange Pi PC Plus
+Home-page: https://github.com/kervendurdy/EByte_LoRa_E220_python_orangepi_library
+Author: Kervendurdy Allaberdiyev
+Author-email: kervendurdy@gmail.com
+Maintainer: Kervendurdy Allaberdiyev
+Maintainer-email: kervendury@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/kervendurdy/EByte_LoRa_E220_python_orangepi_library/blob/master/README.md
+Keywords: LoRa,UART,EByte,esp32,esp8266,stm32,SAMD,Arduino,Raspberry Pi Pico,Raspberry Pi,,Orange Pi PC Plus
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: Implementation :: Orange Pi
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+License-File: LICENSE.md
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: project-url
+Dynamic: summary
+
+Ebyte E220 LoRa (Long Range) library device very cheap and very long range (from 5Km to 10Km). Arduino LoRa EBYTE E220 device library complete and tested with Arduino, esp8266, esp32, STM32 and Raspberry Pi Pico. LLCC68,Orange Pi PC Plus

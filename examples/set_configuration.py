@@ -2,12 +2,12 @@
 # Website: www.mischianti.org
 #
 # Description:
-# This script demonstrates how to use the E220 LoRa module with Raspberry Pi.
+# This script demonstrates how to use the E220 LoRa module with Orange Pi.
 # It initializes the module, retrieves the current configuration,
 # sets a new configuration, and restores the default configuration.
 # It also includes examples of sending and receiving data using the module.
 #
-# Note: This code was written and tested using Raspberry Pi on a ESP32 board.
+# Note: This code was written and tested using Orange Pi on a ESP32 board.
 #       It works with other boards, but you may need to change the UART pins.
 
 from lora_e220 import LoRaE220, print_configuration, Configuration
@@ -18,10 +18,9 @@ from lora_e220_operation_constant import ResponseStatusCode
 import serial
 
 # Create a UART object to communicate with the LoRa module
-loraSerial = serial.Serial('/dev/serial0') #, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
+loraSerial = serial.Serial('/dev/ttyS3') #(, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
 
-# Create a LoRaE220 object, passing the UART object and pin configurations
-lora = LoRaE220('400T22D', loraSerial, aux_pin=18, m0_pin=23, m1_pin=24)
+lora = LoRaE220('900T22D', loraSerial, aux_pin='PA7', m0_pin='PA8', m1_pin='PA9')
 
 # Initialize the LoRa module and print the initialization status code
 code = lora.begin()
@@ -43,7 +42,7 @@ print_configuration(configuration)
 ##########################################################################################
 
 # Create a new Configuration object with the desired settings
-configuration_to_set = Configuration('400T22D')
+configuration_to_set = Configuration('900T22D')
 configuration_to_set.ADDL = 0x02
 configuration_to_set.ADDH = 0x01
 configuration_to_set.CHAN = 23

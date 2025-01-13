@@ -43,7 +43,7 @@ from lora_e220_operation_constant import ResponseStatusCode, ModeType, ProgramCo
 import re
 import time
 import json
-from RPi import GPIO
+from OPi import GPIO
 
 
 class Logger:
@@ -319,7 +319,7 @@ class ModuleInformation:
 class LoRaE220:
     # now the constructor that receive directly the UART object
     def __init__(self, model, uart, aux_pin=None, m0_pin=None, m1_pin=None,
-                 gpio_mode=GPIO.BCM):
+                 gpio_mode=GPIO.SUNXI):
         self.uart = uart
         self.model = model
 

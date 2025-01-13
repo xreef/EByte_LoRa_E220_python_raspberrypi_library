@@ -25,7 +25,7 @@ print(f"Initialization: {ResponseStatusCode.get_description(code)}")
 
 # Set the configuration to default values and print the updated configuration to the console
 # Not needed if already configured
-configuration_to_set = Configuration('400T22D')
+configuration_to_set = Configuration('900T22D')
 # Comment this section if you want test transparent trasmission
 configuration_to_set.ADDH = BROADCAST_ADDRESS # Address of this receive no sender
 configuration_to_set.ADDL = BROADCAST_ADDRESS # Address of this receive no sender

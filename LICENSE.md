@@ -1,9 +1,9 @@
 The MIT License (MIT)
 
-Copyright (c) 2017 Renzo Mischianti www.mischianti.org All right reserved.
+Copyright (c) 2025 Kervendyrdy Allaberdiyev All right reserved.
 
 You may copy, alter and reuse this code in any way you like, but please leave
-reference to www.mischianti.org in your comments if you redistribute this code.
+reference to https://github.com/kervendurdy/ in your comments if you redistribute this code.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -183,7 +183,7 @@ fixed
 ```
 
 
-# This is a porting of the Arduino library for EBYTE LoRa E220 devices to Raspberry Pi
+# This is a porting of the Arduino library for EBYTE LoRa E220 devices to Orange Pi
 
 ## Tutorial of the original library  
 

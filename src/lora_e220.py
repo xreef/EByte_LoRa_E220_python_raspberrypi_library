@@ -1,5 +1,5 @@
 #############################################################################################
-# EBYTE LoRa E220 Series for Raspberry Pi
+# EBYTE LoRa E220 Series for Orange Pi
 #
 # AUTHOR:  Renzo Mischianti
 # VERSION: 0.0.2
@@ -7,7 +7,7 @@
 # This library is based on the work of:
 # https://www.mischianti.org/category/my-libraries/lora-e220-devices/
 #
-# This library implements the EBYTE LoRa E220 Series for Raspberry Pi.
+# This library implements the EBYTE LoRa E220 Series for Orange Pi.
 #
 # The MIT License (MIT)
 #

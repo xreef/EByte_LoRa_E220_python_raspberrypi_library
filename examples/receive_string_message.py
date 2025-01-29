@@ -27,7 +27,7 @@ from lora_e220_constants import FixedTransmission, RssiEnableByte
 loraSerial = serial.Serial('/dev/serial0') #, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
 lora = LoRaE220('400T22D', loraSerial, aux_pin=18, m0_pin=23, m1_pin=24)
 code = lora.begin()
-print("Initialization: {}", ResponseStatusCode.get_description(code))
+print(f"Initialization: {ResponseStatusCode.get_description(code)}")
 
 # Set the configuration to default values and print the updated configuration to the console
 # Not needed if already configured
@@ -40,7 +40,7 @@ configuration_to_set.TRANSMISSION_MODE.fixedTransmission = FixedTransmission.FIX
 configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
 
 code, confSetted = lora.set_configuration(configuration_to_set)
-print("Set configuration: {}", ResponseStatusCode.get_description(code))
+print(f"Set configuration: {ResponseStatusCode.get_description(code)}")
 
 print("Waiting for messages...")
 while True:

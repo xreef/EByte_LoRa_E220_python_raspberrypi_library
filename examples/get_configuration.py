@@ -20,17 +20,17 @@ loraSerial = serial.Serial('/dev/serial0') #, baudrate=9600, parity=serial.PARIT
 lora = LoRaE220('400T22D', loraSerial, aux_pin=18, m0_pin=23, m1_pin=24)
 
 code = lora.begin()
-print("Initialization: {}", ResponseStatusCode.get_description(code))
+print(f"Initialization: {ResponseStatusCode.get_description(code)}")
 
 code, configuration = lora.get_configuration()
 
-print("Retrieve configuration: {}", ResponseStatusCode.get_description(code))
+print(f"Retrieve configuration: {ResponseStatusCode.get_description(code)}")
 
 print_configuration(configuration)
 
 #
-# Initialization: {} Success
-# Retrieve configuration: {} Success
+# Initialization: Success
+# Retrieve configuration: Success
 # ----------------------------------------
 # HEAD :  0xc1   0x0   0x8
 #
